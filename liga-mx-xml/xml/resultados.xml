@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ligaMX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="../xsd/resultados.xsd"
+        torneo="Apertura 2026">
+    <jornada numero="10" fecha="2026-09-27">
+        <partido id="pumas-sanluis">
+            <fecha>2026-09-27</fecha>
+            <hora>12:00:00</hora>
+            <estadio>Estadio Olímpico Universitario</estadio>
+            <local>
+                <equipo>Pumas UNAM</equipo>
+                <goles>2</goles>
+            </local>
+            <visitante>
+                <equipo>Atlético de San Luis</equipo>
+                <goles>3</goles>
+            </visitante>
+            <goleadores>
+                <gol minuto="23" jugador="Sebastien Salles-Lamonge" tipo="penal" equipo="Atlético de San Luis"/>
+                <gol minuto="52" jugador="Rodrigo López" tipo="jugada" equipo="Pumas UNAM"/>
+                <gol minuto="55" jugador="David Rodríguez" tipo="jugada" equipo="Atlético de San Luis"/>
+                <gol minuto="79" jugador="Sebastien Salles-Lamonge" tipo="penal" equipo="Atlético de San Luis"/>
+                <gol minuto="90" jugador="Juninho" tipo="penal" equipo="Pumas UNAM"/>
+            </goleadores>
+            <estadisticas>
+                <equipoEstadisticas equipo="Pumas UNAM">
+                    <posesion>54</posesion>
+                    <faltas>12</faltas>
+                    <tarjetasAmarillas>1</tarjetasAmarillas>
+                    <tarjetasRojas>0</tarjetasRojas>
+                    <atajadas>4</atajadas>
+                </equipoEstadisticas>
+                <equipoEstadisticas equipo="Atlético de San Luis">
+                    <posesion>46</posesion>
+                    <faltas>10</faltas>
+                    <tarjetasAmarillas>2</tarjetasAmarillas>
+                    <tarjetasRojas>0</tarjetasRojas>
+                    <atajadas>4</atajadas>
+                </equipoEstadisticas>
+            </estadisticas>
+        </partido>
+
+        <partido id="leon-fcjuarez">
+            <fecha>2026-09-27</fecha>
+            <hora>19:00:00</hora>
+            <estadio>Estadio Leon</estadio>
+            <local>
+                <equipo>Leon</equipo>
+                <goles>2</goles>
+            </local>
+            <visitante>
+                <equipo>FC Juarez</equipo>
+                <goles>1</goles>
+            </visitante>
+            <goleadores>
+                <gol minuto="76" jugador="F. Nevarez" tipo="autogol" equipo="Juarez"/>
+                <gol minuto="94" jugador="O. Estupiñan" tipo="penal" equipo="Juarez"/>
+                <gol minuto="99" jugador="J. Alvarado" tipo="jugada" equipo="Leon"/>
+            </goleadores>
+            <estadisticas>
+                <equipoEstadisticas equipo="Leon">
+                    <posesion>56</posesion>
+                    <faltas>14</faltas>
+                    <tarjetasAmarillas>2</tarjetasAmarillas>
+                    <tarjetasRojas>0</tarjetasRojas>
+                    <atajadas>0</atajadas>
+                </equipoEstadisticas>
+                <equipoEstadisticas equipo="Juarez">
+                    <posesion>44</posesion>
+                    <faltas>14</faltas>
+                    <tarjetasAmarillas>2</tarjetasAmarillas>
+                    <tarjetasRojas>0</tarjetasRojas>
+                    <atajadas>2</atajadas>
+                </equipoEstadisticas>
+            </estadisticas>
+        </partido>
+
+        <partido id="necaxa-america">
+            <fecha>2026-09-27</fecha>
+            <hora>21:10:00</hora>
+            <estadio>Estadio Victoria</estadio>
+            <local>
+                <equipo>Necaxa</equipo>
+                <goles>2</goles>
+            </local>
+            <visitante>
+                <equipo>America</equipo>
+                <goles>4</goles>
+            </visitante>
+            <goleadores>
+                <gol minuto="45" jugador="Francisco Villalba" tipo="penal" equipo="Santos Laguna" />
+                <gol minuto="45" jugador="Francisco Villalba" tipo="penal" equipo="Santos Laguna" />
+                <gol minuto="45" jugador="Francisco Villalba" tipo="penal" equipo="Santos Laguna" />
+                <gol minuto="45" jugador="Francisco Villalba" tipo="penal" equipo="Santos Laguna" />
+                <gol minuto="45" jugador="Francisco Villalba" tipo="penal" equipo="Santos Laguna" />
+                <gol minuto="45" jugador="Francisco Villalba" tipo="penal" equipo="Santos Laguna" />
+            </goleadores>
+            <estadisticas>
+                <equipoEstadisticas equipo="Necaxa">
+                    <posesion>53</posesion>
+                    <faltas>16</faltas>
+                    <tarjetasAmarillas>3</tarjetasAmarillas>
+                    <tarjetasRojas>0</tarjetasRojas>
+                    <atajadas>4</atajadas>
+                </equipoEstadisticas>
+                <equipoEstadisticas equipo="America">
+                    <posesion>47</posesion>
+                    <faltas>6</faltas>
+                    <tarjetasAmarillas>2</tarjetasAmarillas>
+                    <tarjetasRojas>0</tarjetasRojas>
+                    <atajadas>2</atajadas>
+                </equipoEstadisticas>
+            </estadisticas>
+        </partido>
+    </jornada>
+</ligaMX>

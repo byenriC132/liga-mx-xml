@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="ligaMX">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="jornada">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="partido" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="fecha" type="xs:date"/>
+                                        <xs:element name="hora" type="xs:time"/>
+                                        <xs:element name="estadio" type="xs:string"/>
+
+                                        <xs:element name="local">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="equipo" type="xs:string"/>
+                                                    <xs:element name="goles" type="xs:nonNegativeInteger"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+
+                                        <xs:element name="visitante">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="equipo" type="xs:string"/>
+                                                    <xs:element name="goles" type="xs:nonNegativeInteger"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+
+                                        <xs:element name="goleadores">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="gol" minOccurs="0" maxOccurs="unbounded">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="minuto" use="required">
+                                                                <xs:simpleType>
+                                                                    <xs:restriction base="xs:positiveInteger">
+                                                                        <xs:maxInclusive value="130"/>
+                                                                    </xs:restriction>
+                                                                </xs:simpleType>
+                                                            </xs:attribute>
+                                                            <xs:attribute name="jugador" type="xs:string" use="required"/>
+                                                            <xs:attribute name="tipo" use="required">
+                                                                <xs:simpleType>
+                                                                    <xs:restriction base="xs:string">
+                                                                        <xs:enumeration value="jugada"/>
+                                                                        <xs:enumeration value="penal"/>
+                                                                        <xs:enumeration value="autogol"/>
+                                                                    </xs:restriction>
+                                                                </xs:simpleType>
+                                                            </xs:attribute>
+                                                            <xs:attribute name="equipo" type="xs:string" use="required"/>
+                                                            <xs:attribute name="adicional" type="xs:nonNegativeInteger" use="optional"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+
+                                        <xs:element name="estadisticas">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="equipoEstadisticas" maxOccurs="2">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="posesion" type="Porcentaje"/>
+                                                                <xs:element name="faltas" type="xs:nonNegativeInteger"/>
+                                                                <xs:element name="tarjetasAmarillas" type="xs:nonNegativeInteger"/>
+                                                                <xs:element name="tarjetasRojas" type="xs:nonNegativeInteger"/>
+                                                                <xs:element name="atajadas" type="xs:nonNegativeInteger"/>
+                                                            </xs:sequence>
+                                                            <xs:attribute name="equipo" type="xs:string" use="required"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="id" type="xs:ID" use="required"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="numero" type="xs:positiveInteger" use="required"/>
+                        <xs:attribute name="fecha" type="xs:date" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="torneo" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:simpleType name="Porcentaje">
+        <xs:restriction base="xs:decimal">
+            <xs:minInclusive value="0"/>
+            <xs:maxInclusive value="100"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>
